@@ -9,10 +9,6 @@ jobs:
           POSTGRES_USER: example
     steps:
       - checkout
-      - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          - v1-dependencies-
       - run:
           name: install dependencies
           command: pip install -r requirements.txt
