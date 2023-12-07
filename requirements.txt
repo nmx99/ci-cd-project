@@ -23,11 +23,12 @@ pexpect==4.8.0
 pickleshare==0.7.5
 platformdirs==2.5.1
 prompt-toolkit==3.0.28
-psycopg2==2.9.3
+psycopg2-binary==2.9.9
 ptyprocess==0.7.0
 pure-eval==0.2.2
 Pygments==2.11.2
 pylint==2.12.2
+pylint-report==2.4.0
 pylint-django==2.5.2
 pylint-plugin-utils==0.7
 pytest-cov==4.1.0

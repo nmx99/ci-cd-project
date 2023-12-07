@@ -16,7 +16,7 @@ The idea behind this project is an app to help keep track of physical media, but
 1. Create a virtual env and activate it.
 
 ```bash
-python -m venv venv
+python3 -m venv venv
 source venv/bin/activate
 ```
 
@@ -28,7 +28,7 @@ source venv/bin/activate
 ```bash
 createdb my_media
 psql my_media
-my_media=> CREATE ROLE example WITH LOGIN CREATEDB PASSWORD '1234';
+my_media=> CREATE ROLE multimedia WITH LOGIN CREATEDB PASSWORD 'm0v13';
 ```
 
 4. Run the migrations.
@@ -38,7 +38,7 @@ my_media=> CREATE ROLE example WITH LOGIN CREATEDB PASSWORD '1234';
 ## The Tests
 There are a few unit tests that can be run with:
 
-`python mangae.py test`
+`python manage.py test`
 
 ## Run Pylint
 
