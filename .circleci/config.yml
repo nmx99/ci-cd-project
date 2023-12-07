@@ -16,10 +16,21 @@ jobs:
           name: lint
           command: pylint my_media/ media_organizer/
       - run:
-          name: run tests
-          command: python manage.py test
+          name: run tests with coverage
+          command: coverage run --source=my_media,media_organizer manage.py test
+
+      # Almacenar resultados de las pruebas
       - store_test_results:
           path: test_results
+
+      # Mostrar el informe de cobertura
+      - run:
+          name: show coverage report
+          command: coverage report -m
+
+      # Almacenar el informe de cobertura como artefacto
+      - store_artifacts:
+          path: coverage.xml
 
   build-and-push-to-dockerhub:
     docker:
