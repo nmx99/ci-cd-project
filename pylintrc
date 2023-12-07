@@ -10,4 +10,3 @@ disable=
 
 [FORMAT]
 max-line-length=240
-output-format=json
