@@ -17,7 +17,7 @@ jobs:
           command: pylint my_media/ media_organizer/
       - run:
           name: run tests with coverage
-          command: coverage run --source=my_media,media_organizer manage.py test
+          command: coverage run --source=my_media,media_organizer manage.py test && coverage xml -o coverage.xml
 
       # Almacenar resultados de las pruebas
       - store_test_results:
