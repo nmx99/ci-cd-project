@@ -1,0 +1,11 @@
+<h1>Movies</h1>
+
+{% if movies %}
+    <ul>
+    {% for movie in movies %}
+        <li>{{ movie }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>You haven't Added Any Movies Yet.</p>
+{% endif %}

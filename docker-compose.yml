@@ -1,0 +1,14 @@
+version: "3.9"
+   
+services:
+  db:
+    image: postgres
+    container_name: db
+    hostname: postgres
+    environment:
+      - POSTGRES_NAME=my_media
+      - POSTGRES_USER=multimedia
+      - POSTGRES_PASSWORD=m0v13
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    ports:
+      - 5432:5432
