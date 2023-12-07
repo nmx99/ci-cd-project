@@ -6,7 +6,7 @@ jobs:
       - image: cimg/python:3.10.1
       - image: cimg/postgres:14.1
         environment:
-          POSTGRES_USER: example
+          POSTGRES_USER: multimedia
     steps:
       - checkout
       - run:
