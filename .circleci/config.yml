@@ -1,7 +1,7 @@
 version: 2.1
 
 jobs:
-  test-and-lint:
+  code-quality:
     docker:
       - image: cimg/python:3.10.1
       - image: cimg/postgres:14.1
@@ -42,14 +42,14 @@ jobs:
           docker_layer_caching: true
       - run: |
           echo "$DOCKERHUB_PASSWORD" | docker login --username $DOCKERHUB_USERNAME --password-stdin
-      - run: docker build -t jeffersonnc/circle_ci_python_example:$CIRCLE_BRANCH .
-      - run: docker push jeffersonnc/circle_ci_python_example:$CIRCLE_BRANCH
+      - run: docker build -t jeffnacato/circle_ci_python_example:$CIRCLE_BRANCH .
+      - run: docker push jeffnacato/circle_ci_python_example:$CIRCLE_BRANCH
 
 workflows:
   build-and-test-workflow:
     jobs:
-      - test-and-lint
+      - code-quality
       - build-and-push-to-dockerhub:
           requires:
-            - test-and-lint
+            - code-quality
 
