@@ -1,5 +1,8 @@
 version: 2.1
 
+orbs:
+  sonarcloud: sonarsource/sonarcloud@2.0.0
+
 jobs:
   code-quality:
     docker:
@@ -14,21 +17,17 @@ jobs:
           command: pip install -r requirements.txt
       - run:
           name: lint
-          command: pylint my_media/ media_organizer/
+          command: pylint my_media/ media_organizer/ 2>&1 | tee pylint.json
+
       - run:
           name: run tests with coverage
           command: coverage run --source=my_media,media_organizer manage.py test && coverage xml -o coverage.xml
-
-      # Almacenar resultados de las pruebas
       - store_test_results:
           path: test_results
-
-      # Mostrar el informe de cobertura
+      - sonarcloud/scan
       - run:
           name: show coverage report
           command: coverage report -m
-
-      # Almacenar el informe de cobertura como artefacto
       - store_artifacts:
           path: coverage.xml
 
@@ -47,7 +46,8 @@ jobs:
 workflows:
   build-and-test-workflow:
     jobs:
-      - code-quality
+      - code-quality:
+          context: SonarCloud
       - build-and-push-to-dockerhub:
           requires:
             - code-quality

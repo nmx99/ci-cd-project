@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-	<testsuite name="media_organizer.tests.MoviesTestCase-20231207181633" tests="3" file="media_organizer/tests.py" time="0.019" timestamp="2023-12-07T18:16:33" failures="0" errors="0" skipped="0">
-		<testcase classname="media_organizer.tests.MoviesTestCase" name="test_can_have_multiple_formats" time="0.011" timestamp="2023-12-07T18:16:33" file="media_organizer/tests.py" line="26"/>
-		<testcase classname="media_organizer.tests.MoviesTestCase" name="test_name_is_str" time="0.003" timestamp="2023-12-07T18:16:33" file="media_organizer/tests.py" line="17"/>
-		<testcase classname="media_organizer.tests.MoviesTestCase" name="test_str_returns_all_formats" time="0.005" timestamp="2023-12-07T18:16:33" file="media_organizer/tests.py" line="21"/>
+	<testsuite name="media_organizer.tests.MoviesTestCase-20231208164421" tests="3" file="media_organizer/tests.py" time="0.017" timestamp="2023-12-08T16:44:21" failures="0" errors="0" skipped="0">
+		<testcase classname="media_organizer.tests.MoviesTestCase" name="test_can_have_multiple_formats" time="0.010" timestamp="2023-12-08T16:44:21" file="media_organizer/tests.py" line="26"/>
+		<testcase classname="media_organizer.tests.MoviesTestCase" name="test_name_is_str" time="0.002" timestamp="2023-12-08T16:44:21" file="media_organizer/tests.py" line="17"/>
+		<testcase classname="media_organizer.tests.MoviesTestCase" name="test_str_returns_all_formats" time="0.005" timestamp="2023-12-08T16:44:21" file="media_organizer/tests.py" line="21"/>
 	</testsuite>
 </testsuites>
