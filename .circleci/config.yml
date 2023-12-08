@@ -38,7 +38,7 @@ jobs:
     steps:
       - checkout
       - setup_remote_docker:
-          version: 19.03.13
+          version: 24.0.7
           docker_layer_caching: true
       - run: |
           echo "$DOCKERHUB_PASSWORD" | docker login --username $DOCKERHUB_USERNAME --password-stdin
