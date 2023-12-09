@@ -2,8 +2,11 @@ version: 2.1
 
 orbs:
   sonarcloud: sonarsource/sonarcloud@2.0.0
+  SNYK: snyk/snyk@2.0.2
 
-jobs:
+
+
+jobs: 
   code-quality:
     docker:
       - image: cimg/python:3.10.1
@@ -30,6 +33,8 @@ jobs:
           command: coverage report -m
       - store_artifacts:
           path: coverage.xml
+      - snyk/scan:
+          token-variable: $SNYK_TOKEN      
 
   build-and-push-to-dockerhub:
     docker:
