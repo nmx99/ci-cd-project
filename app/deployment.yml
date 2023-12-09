@@ -18,11 +18,4 @@ spec:
       - name: app-python
         image: python:3.10
         ports:
-        - containerPort: 80        
-        resources:
-          limits:
-            cpu: "500m"
-            memory: "512Mi"
-          requests:
-            cpu: "100m"
-            memory: "256Mi"
+        - containerPort: 80
