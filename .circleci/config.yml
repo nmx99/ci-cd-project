@@ -2,7 +2,7 @@ version: 2.1
 
 orbs:
   sonarcloud: sonarsource/sonarcloud@2.0.0
-  SNYK: snyk/snyk@2.0.2
+  snyk: snyk/snyk@2.0.2
 
 
 
@@ -34,7 +34,7 @@ jobs:
       - store_artifacts:
           path: coverage.xml
       - snyk/scan:
-          token-variable: $SNYK_TOKEN      
+          token-variable: SNYK_TOKEN
 
   build-and-push-to-dockerhub:
     docker:
