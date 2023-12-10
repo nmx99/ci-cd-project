@@ -13,8 +13,8 @@ spec:
         app: myapp
     spec:
       containers:
-      - name: myapp
-        image: jeffnacato/circle_ci_python:main
+      - name: ci-cd-project
+        image: python:3.10.1
         ports:
         - containerPort: 8080
 
