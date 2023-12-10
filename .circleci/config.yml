@@ -3,8 +3,6 @@ version: 2.1
 orbs:
   sonarcloud: sonarsource/sonarcloud@2.0.0
 
-
-
 jobs: 
   code-quality:
     docker:
@@ -53,4 +51,8 @@ workflows:
       - build-and-push:
           requires:
             - code-quality
+
+            
+
+
 
