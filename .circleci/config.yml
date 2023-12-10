@@ -51,6 +51,13 @@ workflows:
       - build-and-push:
           requires:
             - code-quality
+  deploy:
+    jobs:
+      - build-and-push:
+          filters:
+            branches:
+              only:
+                - main
 
         
 
