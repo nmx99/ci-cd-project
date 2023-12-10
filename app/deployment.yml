@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: app-python
-        image: python:3.10
+        image: ppython:3
         ports:
         - containerPort: 80
