@@ -15,7 +15,14 @@ spec:
         app: app
     spec:
       containers:
-      - name: media-app
-        image: jeffnacato/circle_ci_python
+      - name: app
+        image: jeffnacato/circle_ci_python:main
         ports:
         - containerPort: 80
+        resources:
+          limits:
+            cpu: "500m"
+            memory: "512Mi"
+          requests:
+            cpu: "100m"
+            memory: "256Mi"
