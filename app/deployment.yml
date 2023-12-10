@@ -1,28 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: app
-  labels:
-    app: app
+  name: myapp
 spec:
-  replicas: 3
   selector:
     matchLabels:
-      app: app
+      app: myapp
+  replicas: 2
   template:
     metadata:
       labels:
-        app: app
+        app: myapp
     spec:
       containers:
-      - name: app
+      - name: myapp
         image: jeffnacato/circle_ci_python:main
         ports:
-        - containerPort: 80
-        resources:
-          limits:
-            cpu: "500m"
-            memory: "512Mi"
-          requests:
-            cpu: "100m"
-            memory: "256Mi"
+        - containerPort: 8080
+
