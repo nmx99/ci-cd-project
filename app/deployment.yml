@@ -15,7 +15,7 @@ spec:
         app: app
     spec:
       containers:
-      - name: app-python
-        image: ppython:3
+      - name: media-app
+        image: jeffnacato/circle_ci_python
         ports:
         - containerPort: 80
